@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Lobster+Two:ital,wght@0,700;1,400&family=Montserrat:ital,wght@1,800&family=Nunito:wght@500&family=Ubuntu&display=swap');
+
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Montserrat', sans-seri
+font-family: 'Nunito', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+}
+
+html {
+
+    font-size: 62.5%;
+}
+
+/* navbar */
+.navbar {
+    width: 100%;
+    height: 10rem;
+    background-color: black;
+    position: fixed;
+    top: -10rem;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .2rem .2rem .2rem #000;
+    transition: top .5s;
+}
+
+.navbar.change {
+    top: 0rem;
+    transition: top .5s;
+
+
+}
+
+.navbar-link {
+    color: #ECF2FF;
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    align-items: center;
+
+}
+
+.change .navbar-link {
+    opacity: 2;
+}
+
+.navbar-link:hover {
+    color: yellow;
+}
+
+.navbar-link i {
+    font-size: 3rem;
+}
+
+.navbar-link span {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    /* margin-top: .5rem; */
+
+}
+
+.menu {
+    cursor: pointer;
+    width: 4rem;
+    height: 6rem;
+    background-color: black;
+    position: fixed;
+    top: 1rem;
+    left: 3rem;
+    border-radius: 30rem 30rem 15rem 15rem;
+    box-shadow: .1rem .1rem .1rem black, -0.1rem -0.1rem .1rem black;
+    transition: top .5s .2s;
+}
+
+.menu::before {
+    content: "";
+    width: .2rem;
+    height: 16rem;
+    background-color: #000;
+    position: absolute;
+    top: -15rem;
+    left: 2rem;
+}
+
+.menu.change {
+    top: 15rem;
+    transition: top .5s;
+
+}
+
+/* .menu2 {
+    cursor: pointer;
+    width: 4rem;
+    height: 6rem;
+    background-color: black;
+    position: fixed;
+    top: 1rem;
+    left: 3rem;
+    border-radius: 30rem 30rem 15rem 15rem;
+    box-shadow: .1rem .1rem .1rem black, -0.1rem -0.1rem .1rem black;
+} */
+
+/* .menu2::before {
+    content: "";
+    width: .2rem;
+    height: 16rem;
+
+    background-color: #000;
+    position: absolute;
+    top: -15rem;
+    left: 2rem;
+
+
+} */
+
+/* end navbar  */
+
+/* end of common styles */
+
+/* section 1 */
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    background-color: #3E54AC;
+    /* border: 6px solid black; */
+
+}
+
+.section-heading.three {
+    margin-top: 13%;
+
+}
+
+.section-heading {
+    /* border: 2px solid black; */
+    margin-top: 8%;
+    font-size: 9rem;
+    text-shadow: .3rem .3rem .3rem #000;
+
+    letter-spacing: .5rem;
+    text-transform: capitalize;
+    color: whitesmoke;
+    font-weight: 900;
+    line-height: 3.5rem;
+    /* padding: 6rem 0 6rem 0; */
+
+
+}
+
+.section-1-icons i {
+    font-size: 20rem;
+    /* border: 2px solid black; */
+    position: absolute;
+    color: #F5EA5A;
+    text-shadow: 0.2rem 0.2rem 0.2rem #000;
+    transform: translate(-50%, 40%) scale(0);
+    margin-top: 5%;
+    transition: transform .5s;
+
+}
+
+.section-1-icons i.change {
+    transform: translate(-50%, 40%) scale(1);
+    transition: transform .5s .5s;
+
+
+}
+
+/* end of section 1 */
+
+/* section 2 starts */
+.section-2 {
+    margin-top: 0%;
+    width: 100%;
+    height: 130vh;
+    background-color: #ECF2FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 6rem 0 12rem 0; */
+}
+
+.card-cont {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+
+
+}
+
+.card {
+
+    width: 30rem;
+    background-color: #655DBB;
+
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 15rem;
+    margin-right: 5rem;
+    border: 1px solid black;
+    align-items: center;
+    box-shadow: 1rem 1rem 2rem #000;
+    position: relative;
+    transform: rotateY(20deg) skewX(-2deg);
+    transition: transform .5s, box-shadow .5s;
+}
+
+.card:hover {
+
+    transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+    box-shadow: 2rem 2rem 2rem #000;
+
+}
+
+.card::before {
+    content: "";
+    height: 100%;
+    width: 1rem;
+    background-color: #000;
+    top: 0;
+    left: -1rem;
+    position: absolute;
+    transform: skewY(45deg);
+    transform-origin: right;
+
+    box-shadow: .1rem .1rem .1rem #000;
+}
+
+.card::after {
+    content: "";
+    height: 1rem;
+    width: 100%;
+    background-color: #000;
+    top: -1rem;
+    left: 0;
+    position: absolute;
+    transform: skewX(45deg);
+    transform-origin: bottom;
+
+    box-shadow: .1rem .1rem .1rem #000;
+}
+
+.card-img {
+    width: 100%;
+
+
+}
+
+.card-name {
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: .1rem .1rem .1rem #fff;
+    letter-spacing: .5rem;
+    margin: 2rem 0;
+    text-transform: capitalize;
+
+}
+
+.card-btn {
+    width: 60%;
+    background-color: #ECF2FF;
+    padding: 1.2rem;
+    /* color: white; */
+    text-shadow: .1rem .1rem .1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    border-radius: 4rem;
+    letter-spacing: .2rem;
+    /* text-transform: capitalize; */
+    border: none;
+    cursor: pointer;
+    box-shadow: .2rem .2rem .2rem #000;
+
+
+}
+
+.card-btn:hover {
+    border: 2px solid black;
+}
+
+/* end section 3  */
+/* colorhunt link */
+/* https://colorhunt.co/palette/ecf2ff3e54ac655dbbbface2 */
+
+/* section 3 */
+
+.section-3 {
+    /* display: flex; */
+    background-color: #F7EC09;
+    margin-top: 0%;
+    padding: 5rem 0;
+    text-align: center;
+    height: 110vh;
+
+}
+
+.food-img {
+    width: 25vw;
+    height: 25vh;
+    box-shadow: 0.3rem 0.3rem 0.1rem green,
+        .5rem .5rem .1rem yellow, .7rem .7rem .1rem blue, .9rem .9rem .1rem black;
+    object-fit: cover;
+    transition: all .5s;
+}
+
+.gallery-link:hover .food-img {
+    box-shadow: .6rem .6rem 0.1rem green,
+        1.2rem 1.2rem .1rem yellow, 1.8em 1.8rem .1rem blue, 2.4rem 2.4rem .1rem black;
+    filter: blur(.5rem);
+    transform: scale(1.1);
+
+}
+
+.section-gal-heading {
+    /* border: 2px solid black; */
+    margin-top: 5%;
+    font-size: 9rem;
+    text-shadow: .3rem .3rem .3rem #000;
+
+    letter-spacing: .5rem;
+    text-transform: capitalize;
+    color: whitesmoke;
+    font-weight: 900;
+    line-height: 3.5rem;
+
+
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    object-fit: cover;
+    margin-top: 6%;
+}
+
+.gallery-link {
+    position: relative;
+    margin: 3rem .8rem;
+    /* opacity: .8; */
+}
+
+/* also can color the image when hover  */
+/* .gallery-link:hover{
+    opacity: 1;
+} */
+
+.gallery-link:hover::before {
+    height: 80%;
+
+}
+
+.gallery-link::before {
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: .2rem;
+    right: 15%;
+    top: 10%;
+    background-color: white;
+    transition: height .5s;
+    z-index: 10;
+}
+
+.gallery-link:hover::after {
+
+    width: 80%;
+
+}
+
+.gallery-link::after {
+    content: "";
+    position: absolute;
+    height: .2rem;
+    width: 0%;
+    right: 5%;
+    top: 30%;
+    background-color: white;
+    transition: width .4s;
+}
+
+.food-name {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-shadow: 2rem 2rem 2rem #000;
+    color: white;
+    letter-spacing: .5rem;
+    margin: 2rem 0;
+    text-transform: capitalize;
+
+    width: 0;
+    overflow: hidden;
+    transition: width .3S;
+
+}
+
+.gallery-link:hover .food-name {
+    width: 100%;
+    transition: width 1.5s .4s;
+
+
+
+
+}
+
+.food-descp {
+    position: absolute;
+    width: 70%;
+    bottom: 4rem;
+    letter-spacing: .2rem;
+    left: 5%;
+    text-align: start;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: capitalize;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+
+}
+
+.gallery-link:hover .food-descp {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s;
+
+
+}
+
+/* end section 3 */
+
+
+/*  section 4 */
+
+.section-4 {
+    width: 100%;
+    height: 40vh;
+    background-color: #000;
+    display: flex;
+    color: whitesmoke;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+}
+
+.section-4-heading {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #a79a2d;
+}
+
+.section-4-para {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #888;
+}
+
+.signup-form {
+    display: flex;
+    align-items: center;
+}
+
+.email {
+    width: 35rem;
+    height: 4rem;
+    border: .2rem solid #a79a2d;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: .2rem;
+
+}
+
+.form-btn {
+    position: relative;
+    left: -4.5rem;
+    width: 3rem;
+    height: 3rem;
+    color: #a79a2d;
+    border: none;
+    cursor: pointer;
+    background-color: #333;
+    font-size: 2rem;
+
+}
+
+.copyright {
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #eee;
+    letter-spacing: 1rem;
+    border-top: .2rem solid #888;
+    padding-top: 1rem;
+
+    text-align: center;
+}
+
+/* responsoive  */
+@media (max-width:1400px) {
+    html {
+        font-size: 50%;
+    }
+
+    .section-2 {
+        height: fit-content;
+        padding: 6rem 0 0rem 0;
+    }
+
+    .card-cont {
+        margin: 10rem;
+    }
+
+    .section-heading {
+        margin: 1rem;
+    }
+
+    .section-3 {
+        height: auto;
+    }
+
+    .gallery-link {
+        width: 40rem;
+        height: 25rem;
+        margin: 5rem;
+    }
+
+    .food-img {
+        width: 100%;
+        height: 100%;
+
+    }
+
+}
+
+@media (max-width:1000px) {
+    .section-1 {
+        height: 80vh;
+    }
+
+    .section-heading.three {
+        font-size: 8rem;
+        margin-top: 20rem;
+
+    }
+
+    .section-1-icons i {
+        font-size: 15rem;
+    }
+
+    .card-cont {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 5rem;
+    }
+
+    .section-4 {
+        height: 30rem;
+    }
+}
+
+@media (max-width:900px) {
+    .navbar-link {
+        margin: 2rem;
+    }
+
+    .navbar-link i {
+        font-size: 4rem;
+    }
+
+    .navbar-link span {
+        font-size: 2rem;
+    }
+
+
+}
+
+
+
+
+
+@media (max-width:707px) {
+    .section-1 {
+        height: 90vh;
+    }
+
+    .section-heading {
+        font-size: 7rem;
+        margin: 0rem 10rem;
+
+        /* letter-spacing: 2rem; */
+        text-align: center;
+        line-height: 10rem;
+    }
+
+    .section-1-icons i {
+        font-size: 15rem;
+    }
+
+    .menu {
+        left: 2rem;
+    }
+
+    .section-4 {
+        height: 40rem;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+    .signup-form {
+        margin-bottom: 8rem;
+    }
+
+
+}
+
+@media (max-width:500px) {
+    html {
+        font-size: 40%;
+    }
+
+    .navbar-link {
+        margin: 0 .7rem;
+    }
+
+    .menu {
+        z-index: 2;
+    }
+
+    .email {
+        width: 20rem;
+        height: 4rem;
+        font-size: 1.4rem;
+
+
+    }
+}
